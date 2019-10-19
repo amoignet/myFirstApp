@@ -1,0 +1,20 @@
+<p>T'as vu sign-up works, Batèr!</p>
+
+<h1>{{payload.email}}</h1>
+
+<form (submit)="myForm.valid" #myForm="ngForm">
+
+<label>email:
+<input [(ngModel)]="payload.email" type="email" name="email" #emailRef="ngModel" email required/>
+<div *ngIf="emailRef?.errors?.required  && myForm.submitted">L'email est requis</div>
+<div *ngIf="emailRef?.errors?.email && myForm.submitted">L'email n'est pas valide</div>
+</label>
+
+<div>
+    <button type="reset">Restaurer</button>
+    <button type="submit">soumettre</button>
+  </div>
+
+</form>
+
+

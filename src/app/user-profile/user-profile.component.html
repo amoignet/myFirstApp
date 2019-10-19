@@ -1,0 +1,11 @@
+<div>
+<h2>{{ UserProfile.name}}</h2>
+<h2>{{ UserProfile.firstName }}</h2>
+<p *ngIf="isVisible">{{ UserProfile.age }}</p>
+<img *ngIf="estAffiche" [src]="UserProfile.photo" alt="légo">
+<P></P>
+<input [(ngModel)]="UserProfile.quote"> Ecrit une bétise
+<h3>Ici s'affiche ta bétise =>{{ UserProfile.quote }} </h3>
+<button (click)="disparition()">cache ton age</button>
+<button (click)="cacheLaPhoto()">Disparition de la photo</button>
+</div>
